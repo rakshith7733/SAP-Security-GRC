@@ -20,7 +20,7 @@
 11. Security Audit Tools
 12. SAP Security Optimization.
 13. Secure Network Communications.
-
+--------------------------------------------------------------------
 *SAP Architecture*
 Three Tier Architecture
 |
@@ -51,5 +51,24 @@ SAP System
         ├── Authorizations
         ├── GRC
         └── Compliance
+--------------------------------------------------------------------
+SAP ECC
+- Older ERP platform
+- GUI Based environment.
+
+SAP S/4 HANA
+- SAP HANA Database
+- Faster processing
+- Fiori Applications
+- Simplified Data Model
+- Embeded Analytics
+
+SAP Fiori:
+- Modern SAP user Interface
+- Uses SAP Fiori, Apps, Tiles, Launchpad
+
+Ex: Purchase Order App
+    Display Financial Report App
+
 
 
