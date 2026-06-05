@@ -70,5 +70,47 @@ SAP Fiori:
 Ex: Purchase Order App
     Display Financial Report App
 
+*Security in Day-to-Day life*
+
+Assets
+- Hardware
+- Software
+- Data
+
+
+Threats
+- Persons(Hackers)
+- Environment(Floods)
+- Technology(Data crash)
+
+Measures
+- Organizations(Procedures, trainings)
+- Environment(Fire alarms)
+- Technology(Hardware router, Data backup, password rules, Authorizations)
+--------------------------------------------------------------------
+
+*SAP Access Controls*
+
+#### System Access Control:
+- User must identify themselves in the system.
+- Configuration of system access control(Ex. Password Rules).
+
+#### Access Control:
+- Access rights for functions and data must be granted explicitly using authorizations
+- Authorization checks for
+    - Transaction / Report calls.
+    - Program Execution.
+
+--------------------------------------------------------------------
+*Technical Implementation of Roles*
+"Business Purchase" Role
+
+Role Menu:
+- Accessible transactions, reports, web links and so on.
+- Structure of the Menus / Access Paths
+
+Authorizations:
+- Selective access to business functions and data using profiles.
+
 
 
