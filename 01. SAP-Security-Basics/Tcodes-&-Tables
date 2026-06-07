@@ -1,0 +1,21 @@
+
+Table Name    Action
+TACT          To check activities.
+TACTZ         To check which activity is present for Authorization Object.
+USR02         To check user Information.
+
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+### Important Security Tcodes:
+SU01     - User Maintenance
+SU01D    - User Display
+SUGR     - User Group
+SU10     - Mass User Maintenance
+SUIM     - User Reports
+SU53     - Authorization Checks/Failures
+PFCG     - Role Maintenance
+SM04     - User Sessions
+SU56     - SAP User Buffer
+RSUSR200 - User Audit Report
+SE16     - Table Browser

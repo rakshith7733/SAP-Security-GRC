@@ -101,7 +101,7 @@ Measures
     - Transaction / Report calls.
     - Program Execution.
 
---------------------------------------------------------------------
+----------------------------------------------------------------------------
 *Technical Implementation of Roles*
 "Business Purchase" Role
 
@@ -113,4 +113,7 @@ Authorizations:
 - Selective access to business functions and data using profiles.
 
 
-
+-------------------------------------------------------------------------------
+Table Name    Action
+TACT          To check activities.
+TACTZ         To check which activity is present for Authorization Object.

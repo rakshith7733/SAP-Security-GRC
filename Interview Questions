@@ -1,9 +1,39 @@
 #### ECC
 Q1. What is SAP ERP? 
-SAP is an ERP software that integrates various business functions such as Finance, Procurement, Sales, Manufacturing, and Human Resources into a single system. 
-It enables organizations to streamline processes, improve data consistency, and support business operations through a centralized platform. 
-SAP Security is responsible for managing users, roles, and authorizations to ensure secure and compliant access to SAP systems.
+         SAP is an ERP software that integrates various business functions such as Finance, Procurement, Sales, Manufacturing, and Human Resources into a single system. 
+         
+         It enables organizations to streamline processes, improve data consistency, and support business operations through a centralized platform. 
+         
+         SAP Security is responsible for managing users, roles, and authorizations to ensure secure and compliant access to SAP systems.
 
-Q2. 
+Q2. What is an Authorization?
 
+         Authorization is a permission granted to a user that allows them to perform specific activities within SAP. SAP verifies these permissions through authorization objects and values assigned via roles.
+
+Q3. What is an Authorization Object?
+
+         An Authorization Object is a collection of fields that SAP checks during authorization validation. It acts as a container for authorization values.
+
+Q4. "A third-party application connects to SAP through ODBC/RFC. Which user type should be used?"
+          Generally a Communication User is recommended because it is intended for external application and interface communication. System Users are typically reserved for internal system-to-system technical communication and background processing.
+
+Basic
+What is a User Master Record?
+What are SAP user types?
+Difference between Dialog and Communication User?
+Difference between System and Communication User?
+What is a Service User?
+What is a Reference User?
+Intermediate
+How do you lock/unlock a user?
+How do you assign roles?
+What is user group usage?
+What is S_USER_GRP?
+What is mass user maintenance?
+Advanced
+How do you secure RFC users?
+Why are Service Users risky?
+How do you perform user provisioning?
+How do you audit privileged users?
+How do you manage emergency access users?      
 #### S/4 HANA
