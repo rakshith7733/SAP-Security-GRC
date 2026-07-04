@@ -51,6 +51,7 @@ SAP System
         ├── Authorizations
         ├── GRC
         └── Compliance
+
 --------------------------------------------------------------------
 SAP ECC
 - Older ERP platform
@@ -114,6 +115,7 @@ Authorizations:
 
 
 -------------------------------------------------------------------------------
-Table Name    Action
-TACT          To check activities.
-TACTZ         To check which activity is present for Authorization Object.
+
+
+
+

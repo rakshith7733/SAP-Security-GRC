@@ -61,23 +61,88 @@ Ex: ACTVT: Activity(01,02,03)
     WERKS: Plant(NL51,2000-2329)
 
 *Most Common Authorization Objects*
-S_TCODE	    Transaction Access
-S_USER_GRP	User Groups
-S_USER_AGR	Role Administration
-S_USER_PRO	Profile Administration
-M_BEST_EKO	Purchasing Organization
-F_BKPF_BUK	Company Code Authorization
+
+    S_TCODE	    Transaction Access
+    S_USER_GRP	User Groups
+    S_USER_AGR	Role Administration
+    S_USER_PRO	Profile Administration
+    M_BEST_EKO	Purchasing Organization
+    F_BKPF_BUK	Company Code Authorization
 
 Field, Object, & Object Classes
 
-Authorization_Fields  Authorization_Objects  Authorization_Object_classes
-      BUKRS                 M_RECH_BUK                  MM_R
-      ACTVT                 F_KNA1_BUK                  FI
-      WERKS                 M_MSEG_WWA                  MM_S
-      BEGRU                 V_KNA1_BRG                  SD
+    Authorization_Fields  Authorization_Objects  Authorization_Object_classes
+        BUKRS                 M_RECH_BUK                  MM_R
+        ACTVT                 F_KNA1_BUK                  FI
+        WERKS                 M_MSEG_WWA                  MM_S
+        BEGRU                 V_KNA1_BRG                  SD
       
    --> The above data is associate with each other to authorization object and respective object class based on the activity the user will able to access what was assigned in authorization objects in a transaction.
 
+
+#### Elements of the SAP Authorization Concept
+    Object Class         | Authorization Object | Authorization   | Profile     | Role  | User
+    Financial Accounting | F_KNA1_BUK           | Fields & Values | T_58000097  | Z_ROLE | User master: PWIPRUK
+
+1. Object Class: A logical group of authorization objects
+
+       Ex: Material Management: Purchasing.
+
+
+2. Authorization object: Defines what needs to be checked during authorization.
+   - contains one or more authorization fields.
+
+            Ex: Auth object: M_BEST_BSA
+                Activity (ACTVT)
+                Document type (BSART)
+
+3. Authorization: An authorization object with specific field values assigned.
+
+        Ex: Auth object: M_BEST_BSA
+            Activity (ACTVT): 01,02,03
+            Document type (BSART): NB(standard po)
+
+4. Profile: A technical container generated from role authorization at the time of creation.
+   - Generated when you click "Generated Profile" in PFCG.
+
+         Ex: T-PD56999
+
+5. Role: Central authorization objects of SAP.
+
+        Contains: Menu
+                  Transactions
+                  Fiori Apps
+                  Authorizations
+        
+        Types of roles:
+                Single Roles
+                Derived Roles
+                Composite Roles
+                Master Roles
+                Technical Roles
+                Business Roles
+
+       Ex: Z_2329_MM_P01_MAINT_MASTER
+
+6. Users: SAP Login account
+
+Ex: PWIPRUK
+
+
+#### Authorization checks at transaction start
+    VA01 (Create Sales Order)
+    |
+    |----checks S_TCODE:TCD-'VA01'  ==NO==> "No Authorization to transaction VA01.
+                |
+                |
+                YES--- Checks objects for VA01   ==NO==> 'missing authorization objects
+                       (V_VBAK_VKO,ACTVT,SPART)  
+                        |
+                        | 
+                        YES ==> Executes the ABAP Program and checks for next screen/program.
+
+
+                        
 
 
 

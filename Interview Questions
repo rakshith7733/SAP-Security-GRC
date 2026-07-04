@@ -5,18 +5,39 @@ Q1. What is SAP ERP?
          It enables organizations to streamline processes, improve data consistency, and support business operations through a centralized platform. 
          
          SAP Security is responsible for managing users, roles, and authorizations to ensure secure and compliant access to SAP systems.
-
+----------------------------------------------------------------------------
 Q2. What is an Authorization?
 
          Authorization is a permission granted to a user that allows them to perform specific activities within SAP. SAP verifies these permissions through authorization objects and values assigned via roles.
-
+----------------------------------------------------------------------------
 Q3. What is an Authorization Object?
 
          An Authorization Object is a collection of fields that SAP checks during authorization validation. It acts as a container for authorization values.
-
+----------------------------------------------------------------------------
 Q4. "A third-party application connects to SAP through ODBC/RFC. Which user type should be used?"
           Generally a Communication User is recommended because it is intended for external application and interface communication. System Users are typically reserved for internal system-to-system technical communication and background processing.
-
+----------------------------------------------------------------------------
+Q5. What is the purpose of SU24?
+    To maintain authorization defaults and check indicators for transactions so that authorization objects are automatically proposed in PFCG.
+----------------------------------------------------------------------------
+Q6. What is the difference between SU22 and SU24?
+    SU22: SAP-delivered authorization defaults.
+    SU24: Customer-maintained authorization defaults.
+----------------------------------------------------------------------------
+Q7. What is SU25 used for?
+    After upgrades, SU25 copies SAP authorization defaults from SU22 to SU24 and adjusts customer data.
+----------------------------------------------------------------------------
+Q8. Why is SU24 important?
+    It reduces manual role maintenance, improves role quality, and ensures correct authorization objects are proposed during role creation.
+----------------------------------------------------------------------------
+Q9: What is the difference between "Check" and "Check/Maintain" in SU24?
+    Both perform authorization checks during transaction execution.
+    Check/Maintain proposes the authorization object in PFCG for role maintenance.
+    Check performs the runtime check but does not propose the object in PFCG.
+----------------------------------------------------------------------------
+Q10: What is the purpose of the Parameters tab in SU01?
+    No. Parameters only provide default values on screens. They have nothing to do with transaction authorization or role assignment.
+----------------------------------------------------------------------------
 Basic
 What is a User Master Record?
 What are SAP user types?
@@ -35,5 +56,6 @@ How do you secure RFC users?
 Why are Service Users risky?
 How do you perform user provisioning?
 How do you audit privileged users?
-How do you manage emergency access users?      
+How do you manage emergency access users?   
+-----------------------------------------------------------------------------------------------   
 #### S/4 HANA

@@ -1,0 +1,22 @@
+Role: ZS_2329_MM_P01_MAINT_PO
+Role Naming:
+custom namespace - Z or Y
+Role Type: Composite
+           Master Role
+           Single Role
+           Single Derived Role
+           Single Global Role
+Seperator
+Organizational unit: 2329
+                     XXXX
+                     GLBL
+Seperator
+Module: MM, HR, SD
+System: Finance
+        Business Intelligence
+Seperator
+Type of access: Create
+                Display
+                Maintain
+Seperator
+Task specific: create PO

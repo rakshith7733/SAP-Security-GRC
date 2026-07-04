@@ -1,0 +1,76 @@
+### TCODE: 
+#### SU24 (Maintain Authorisations Values)
+
+-> This transaction is used to maintain authorisation default values and check indicators for transactions, reports, and other applications.
+
+-> The values maintained in the SU24 are automatically pulled during role building in PFCG.
+
+##### Purpose:
+- Maintain authorization objects checked by a transaction.
+- Define default authorization values.
+- Control which authorization objects are proposed during role creation in PFCG.
+
+##### Work Flow
+    Create / identify transaction (Auth Obj: V_VBAK_VKO)
+            |
+    Assign in SU24 Under transaction code drop down
+            |
+    Maintain Authorization proposals in SU24 (set Indicator to Check/maintain, proposal status: Y or N, if not taken automatically)
+            |
+    Assign authorization values
+            |
+    It will ask for Transport (Create a WorkBench TR and move the changes to capture the changes).
+            |
+    Generate roles in PFCG
+            |
+    Assign roles to user
+-------------------------------------------------------------------------------------------------
+
+##### Check Indicators:
+1. Check/Maintain (Most Common)
+
+        SAP performs the authorization check.
+        The object is automatically proposed when creating a role in PFCG.
+
+        If set to Check/Maintain:
+        - Object appears in PFCG role menu.
+        - Security administrator maintains authorization values.
+        - During execution, SAP checks whether the user has the required authorization.
+
+        Ex: Standard business authorization objects that should be maintained in roles.
+
+2. Check
+
+        SAP performs the authorization check.
+        Object is NOT automatically proposed in PFCG.
+
+        If set to Check:
+        - Runtime authorization check occurs.
+        - Object is not automatically added to roles.
+
+        Ex: Techncal objects, objects that should not be maintained by role administartor through standard role generation.
+
+3. Do Not Check
+
+        SAP does not perform the authorization check.
+        Object is not proposed in PFCG.
+
+        If set to Do Not Check:
+        - Authorization check skipped
+
+        Use Case
+        - Remove unnecessary authorization checks.
+        - Simplify role maintenance.
+        - Used carefully because it can affect security.
+
+                Ex: An authorization object exists in the program but is not required for your implementation.
+------------------------------------------------------------------
+#### SU10 (Mass User Maintenance)
+
+- It let the administrator perform bulk operations on user accounts (Create, Modify, Lock/Unlock, Assign roles, delete, change passwords).
+
+- This a critical transaction used by security administrators.
+- SU10 applies changes in bulk, we need to use it caution and test changes in non-productive environmnent.
+
+------------------------------------------------------------------
+
