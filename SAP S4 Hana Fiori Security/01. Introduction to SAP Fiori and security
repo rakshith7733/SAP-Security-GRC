@@ -1,0 +1,55 @@
+# SAP S/4 Hana Fiori Security
+
+
+SAP - Systems, Applications and Products in Data Processing
+
+- Leading ERP Enterprose Resource planning software.
+- Modules: Finance, HR, Logistics, & Manufacturers.
+- SAP ERP, SAP S/4 HANA, SAP on Premise, SAP on Cloud.
+
+##### What is SAP S/4 Hana?
+- SAP S/4 Hana is a next gen ERP suite, optimized for the in-memory SAP HANA database. 
+- It delivers simplified data models.
+- Real time analytics
+- Enhanced user experiences through fiori apps.
+
+##### What is SAP HANA?
+- SAP HANA is an in-memory database and development platform designed from scratch to be used for thier ER suite.
+- This enables fast processing and real time analytics
+
+##### What is Fiori?
+- SAP Fiori is a design system and UX approach that provides users with modern, intutive, and role based experience across devices. it replaces the GUI with apps & tiles.
+
+- Modern look replacement for old SAP GUI
+- Responsive design - accessible on any device like mobile, Tab, desktop.
+- Rapid deployment - web technology at core HTML5/Odata/Javascript.
+- SAPUI5 Framework - Design guidlines.
+- T-code to Fiori Launchpad: /n/ui2/flp
+
+##### What is RISE with SAP?
+- Rise with SAP is a subscription based offering combining S/4 Hana infrastructure, and transformation services into a single contract for cloud transformations.
+
+#### Fiori Deployment:
+
+##### Embedded Deployment:
+- Fiori (FES) server runs on same server where the backend runs infrastructure cost reduced.
+- If we have one ECC system than this setup is suitable. as it would decrease security complexity.
+- performance boost - faster UI load.
+
+- Only draw back is that if backend crashes access will be lost.
+
+##### Hub Deployment:
+- Seperate Front end server running Fiori (FES), connected via RFCs. more infrastructure cost.
+
+- This is suited for customer with multiple ECC systems and want to use Fiori as UI. (This is not a future proof for S/4 hana which goes with embedded deployment).
+- Security and configuration will be complicated as multiple system level security to be enhanced.
+
+
+##### SAP BTP / Build Work Zone
+- To establish a central point of access to multiple S/4 HANA systems & other SAP products. The recomendation is to use SAP Build work zone on SAP BTP (Cloud Foundry).
+
+- This will be logged into signle sign on into Build work zone and based upon tiles and its target mapping it will automatically redirect the correct S/4 Hana system.
+
+
+
+
