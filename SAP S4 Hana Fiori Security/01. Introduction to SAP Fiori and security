@@ -49,7 +49,3 @@ SAP - Systems, Applications and Products in Data Processing
 - To establish a central point of access to multiple S/4 HANA systems & other SAP products. The recomendation is to use SAP Build work zone on SAP BTP (Cloud Foundry).
 
 - This will be logged into signle sign on into Build work zone and based upon tiles and its target mapping it will automatically redirect the correct S/4 Hana system.
-
-
-
-
